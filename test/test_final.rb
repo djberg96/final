@@ -30,6 +30,10 @@ class TC_Final < Test::Unit::TestCase
     assert_raise(Final::Error){ class Foo; def bar; end; end }
   end
 
+  test "adding a new method is not an error" do
+    assert_nothing_raised{ class Foo; def baz; end; end }
+  end
+
   def teardown
     @foo = nil
   end
