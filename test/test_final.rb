@@ -11,6 +11,7 @@ require 'final'
 class TC_Final < Test::Unit::TestCase
   class Foo
     include Final
+    def bar; end
   end
 
   def setup
@@ -23,6 +24,10 @@ class TC_Final < Test::Unit::TestCase
 
   test "final class cannot be subclassed" do
     assert_raise(Final::Error){ class Bar < Foo; end }
+  end
+
+  test "final class cannot have instance methods redefined" do
+    assert_raise(Final::Error){ class Foo; def bar; end; end }
   end
 
   def teardown
