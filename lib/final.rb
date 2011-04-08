@@ -14,18 +14,16 @@ module Final
       raise Error, "cannot subclass #{self}" unless self == Object
     end
 
-    # Prevent instance methods and singleton methods from being redefined.
+    # Prevent methods from being redefined.
     #--
     # FIXME: We don't want to raise an error on initial definition. Otherwise
     # people will have to do the include -after- all initial method definitions.
     #
     def mod.method_added(sym)
-      if self.new.respond_to?(sym)
-        raise Error, "instance method '#{sym}' already defined"
-      end
-
-      if self.respond_to?(sym)
-        raise Error, "singleton method '#{sym}' already defined"
+      if self.instance_methods.respond_to?(sym) ||
+         self.instance_methods.respond_to(sym.to_s)
+      then
+        raise Error, "method '#{sym}' already defined"
       end
     end
   end
