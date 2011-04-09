@@ -34,6 +34,10 @@ class TC_Final < Test::Unit::TestCase
     assert_nothing_raised{ class Foo; def baz; end; end }
   end
 
+  test "finalized classes do not interfere with each other" do
+    assert_nothing_raised{ class Foo2; include Final; def bar; end; end }
+  end
+
   def teardown
     @foo = nil
   end
