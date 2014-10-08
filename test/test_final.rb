@@ -19,7 +19,7 @@ class TC_Final < Test::Unit::TestCase
   end
 
   test "version constant returns expected version number" do
-    assert_equal('0.1.0', Final::VERSION)
+    assert_equal('0.1.1', Final::VERSION)
   end
 
   test "final class cannot be subclassed" do
