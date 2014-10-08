@@ -1,2 +1,6 @@
+== 0.1.1 - 8-Oct-2014
+* Updated gemspec, removed references to RubyForge, etc.
+* Updated Rakefile for Rubygems 2.x.
+
 == 0.1.0 - 8-Apr-2011
   * Initial release
