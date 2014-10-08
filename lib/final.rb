@@ -6,7 +6,7 @@ module Final
   class Error < RuntimeError; end
 
   # The version of the final library.
-  VERSION = '0.1.0'
+  VERSION = '0.1.1'
 
   def self.included(mod)
     # Store already defined methods.
