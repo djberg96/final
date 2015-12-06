@@ -2,6 +2,9 @@
   A Ruby module that can make your classes final. A final class cannot
   be subclassed, and its instance methods cannot be redefined.
 
+= Installation
+  gem install final
+
 = Synopsis
   require 'final'
 
@@ -50,7 +53,7 @@
   Artistic 2.0
 
 = Copyright
-  (C) 2003-2014 Daniel J. Berger
+  (C) 2003-2015 Daniel J. Berger
   All Rights Reserved.
 
 = Warranty
