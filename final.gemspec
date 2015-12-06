@@ -2,7 +2,7 @@ require 'rubygems'
 
 Gem::Specification.new do |gem|
   gem.name       = 'final'
-  gem.version    = '0.1.1'
+  gem.version    = '0.1.2'
   gem.license    = 'Artistic 2.0'
   gem.author     = 'Daniel J. Berger'
   gem.email      = 'djberg96@gmail.com'
@@ -10,6 +10,7 @@ Gem::Specification.new do |gem|
   gem.summary    = "An implementation of 'final' for Ruby"
   gem.test_files = Dir['test/test*']
   gem.files      = Dir['**/*'].reject{ |f| f.include?('git') }
+  gem.cert_chain = Dir['certs/*']
 
   gem.extra_rdoc_files  = ['README', 'CHANGES', 'MANIFEST']
 
