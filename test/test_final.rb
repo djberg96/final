@@ -4,8 +4,7 @@
 # Test suite for the final library.
 ########################################################################
 require 'rubygems'
-gem 'test-unit'
-require 'test/unit'
+require 'test-unit'
 require 'final'
 
 class TC_Final < Test::Unit::TestCase
@@ -19,7 +18,7 @@ class TC_Final < Test::Unit::TestCase
   end
 
   test "version constant returns expected version number" do
-    assert_equal('0.1.1', Final::VERSION)
+    assert_equal('0.1.2', Final::VERSION)
   end
 
   test "final class cannot be subclassed" do
