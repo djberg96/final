@@ -6,7 +6,7 @@ module Final
   class Error < RuntimeError; end
 
   # The version of the final library.
-  VERSION = '0.1.2'
+  FINAL_VERSION = '0.2.0'.freeze
 
   def self.included(mod)
     # Store already defined methods.
