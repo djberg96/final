@@ -50,10 +50,10 @@
   not final. This change may happen in a future release.
 
 = License
-  Artistic 2.0
+  Apache-2.0
 
 = Copyright
-  (C) 2003-2015 Daniel J. Berger
+  (C) 2003-2019 Daniel J. Berger
   All Rights Reserved.
 
 = Warranty
