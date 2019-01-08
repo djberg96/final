@@ -1,3 +1,9 @@
+== 0.2.0 - 8-Jan-2019
+* Changed license to Apache-2.0.
+* The VERSION constant is now FINAL_VERSION since this is a module.
+* Added some metadata to the gemspec.
+* Updated the cert, should be good for about 10 years.
+
 == 0.1.2 - 6-Dec-2015
 * This gem is now signed.
 * The gem related tasks in the Rakefile now assume Rubygems 2.x.
