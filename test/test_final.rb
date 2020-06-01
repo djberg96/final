@@ -18,7 +18,7 @@ class TC_Final < Test::Unit::TestCase
   end
 
   test "version constant returns expected version number" do
-    assert_equal('0.2.0', Final::FINAL_VERSION)
+    assert_equal('0.2.1', Final::FINAL_VERSION)
     assert_true(Final::FINAL_VERSION.frozen?)
   end
 
