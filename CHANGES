@@ -1,3 +1,6 @@
+== 0.2.1 - 1-Jun-2020
+* Added a LICENSE file to distro as required by the Apache-2.0 license.
+
 == 0.2.0 - 8-Jan-2019
 * Changed license to Apache-2.0.
 * The VERSION constant is now FINAL_VERSION since this is a module.
