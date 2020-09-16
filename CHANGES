@@ -1,3 +1,6 @@
+== 0.3.0 - 16-Sep-2020
+* Switched from test-unit to rspec, and made corresponding updates.
+
 == 0.2.1 - 1-Jun-2020
 * Added a LICENSE file to distro as required by the Apache-2.0 license.
 
