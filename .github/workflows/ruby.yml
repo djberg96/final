@@ -1,6 +1,10 @@
 name: Ruby Tests
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
 
 jobs:
   test:
@@ -12,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: ruby/setup-ruby@v1
-    - with:
+      with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true
-    - run: bundle exec rake
+      run: bundle exec rake
