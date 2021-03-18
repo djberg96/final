@@ -13,10 +13,10 @@ jobs:
         ruby-version: ['2.6', '2.7']
         platform: [ubuntu-latest, macos-latest, windows-latest]
     runs-on: ${{ matrix.platform }}
-    run: bundle exec rake
     steps:
     - uses: actions/checkout@v2
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true
+    - run: bundle exec rake
