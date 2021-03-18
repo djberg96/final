@@ -1,3 +1,5 @@
+[![Ruby](https://github.com/djberg96/final/actions/workflows/ruby.yml/badge.svg)](https://github.com/djberg96/final/actions/workflows/ruby.yml)
+
 ## Description
 A Ruby module that can make your classes final. A final class cannot
 be subclassed, and its instance methods cannot be redefined.
