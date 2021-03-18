@@ -1,10 +1,18 @@
-name: Ruby Tests
+name: Ruby
 
 on:
   push:
-    branches: [ $default-branch ]
+    branches: [ master ]
+    paths-ignore:
+      - '**/README.md'
+      - '**/CHANGES.md'
+      - '**/MANIFEST.md'
   pull_request:
-    branches: [ $default-branch ]
+    branches: [ master ]
+    paths-ignore:
+      - '**/README.md'
+      - '**/CHANGES.md'
+      - '**/MANIFEST.md'
 
 jobs:
   test:
@@ -15,8 +23,10 @@ jobs:
     runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@v2
-    - uses: ruby/setup-ruby@v1
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true
-    - run: bundle exec rake
+    - name: Run tests
+      run: bundle exec rake
