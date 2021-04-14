@@ -18,7 +18,7 @@ module Final
     end
 
     # Prevent subclassing, except implicity subclassing from Object.
-    def mod.inherited(sub)
+    def mod.inherited(_sub)
       raise Error, "cannot subclass #{self}" unless self == Object
     end
 
