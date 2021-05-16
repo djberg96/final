@@ -12,8 +12,9 @@ Gem::Specification.new do |spec|
   spec.files      = Dir['**/*'].reject{ |f| f.include?('git') }
   spec.cert_chain = Dir['certs/*']
 
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "rspec", "~> 3.9"
+  spec.add_development_dependency('rake')
+  spec.add_development_dependency('rspec', '~> 3.9')
+  spec.add_development_dependency('test-unit', '~> 3.4')
 
   spec.metadata = {
     'homepage_uri'      => 'https://github.com/djberg96/final',
@@ -28,7 +29,4 @@ Gem::Specification.new do |spec|
     The final library enables you to declare your classes as final. This
     prevents your class from being subclassed or having its methods redefined.
   EOF
-
-  spec.add_development_dependency('rake')
-  spec.add_development_dependency('test-unit', '>= 2.2.0')
 end
