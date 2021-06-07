@@ -2,7 +2,7 @@ require 'rubygems'
 
 Gem::Specification.new do |spec|
   spec.name       = 'final'
-  spec.version    = '0.3.0'
+  spec.version    = '0.3.1'
   spec.license    = 'Apache-2.0'
   spec.author     = 'Daniel J. Berger'
   spec.email      = 'djberg96@gmail.com'
@@ -14,7 +14,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency('rake')
   spec.add_development_dependency('rspec', '~> 3.9')
-  spec.add_development_dependency('test-unit', '~> 3.4')
 
   spec.metadata = {
     'homepage_uri'      => 'https://github.com/djberg96/final',
