@@ -9,29 +9,28 @@ module Final
   FINAL_VERSION = '0.3.0'.freeze
 
   def self.included(mod)
-    # Store already defined methods.
-    mod.instance_eval("@final_methods = []")
+    mod.instance_eval do
+      # Store already defined methods.
+      def final_methods
+        @final_methods ||= []
+      end
 
-    # Internal accessor used in the method_added definition.
-    def mod.final_methods
-      @final_methods
-    end
+      # Prevent subclassing, except implicity subclassing from Object.
+      def inherited(_sub)
+        raise Error, "cannot subclass #{self}" unless self == Object
+      end
 
-    # Prevent subclassing, except implicity subclassing from Object.
-    def mod.inherited(_sub)
-      raise Error, "cannot subclass #{self}" unless self == Object
-    end
-
-    # Prevent methods from being redefined.
-    #--
-    # There's still going to be a method redefinition warning. Gosh, it
-    # sure would be nice if we could disable warnings.
-    #
-    def mod.method_added(sym)
-      if final_methods.include?(sym)
-        raise Error, "method '#{sym}' already defined"
-      else
-        final_methods << sym
+      # Prevent methods from being redefined.
+      #--
+      # There's still going to be a method redefinition warning. Gosh, it
+      # sure would be nice if we could disable warnings.
+      #
+      def method_added(sym)
+        if final_methods.include?(sym)
+          raise Error, "method '#{sym}' already defined"
+        else
+          final_methods << sym
+        end
       end
     end
   end
