@@ -19,7 +19,7 @@ RSpec.describe Final do
   end
 
   example "version constant returns expected version number" do
-    expect(Final::FINAL_VERSION).to eq('0.3.0')
+    expect(Final::FINAL_VERSION).to eq('0.3.1')
     expect(Final::FINAL_VERSION).to be_frozen
   end
 

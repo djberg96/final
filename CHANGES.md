@@ -1,3 +1,7 @@
+## 0.3.1 - 7-Jun-2021
+* Some internal refactoring to avoid string based instance_eval, plus
+  added some memoization. Thanks go to Okura Masafumi for the patch.
+
 ## 0.3.0 - 16-Sep-2020
 * Switched from test-unit to rspec, and made corresponding updates.
 

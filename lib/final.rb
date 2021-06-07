@@ -6,7 +6,7 @@ module Final
   class Error < RuntimeError; end
 
   # The version of the final library.
-  FINAL_VERSION = '0.3.0'.freeze
+  FINAL_VERSION = '0.3.1'.freeze
 
   def self.included(mod)
     mod.instance_eval do
