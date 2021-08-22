@@ -7,6 +7,9 @@ be subclassed, and its instance methods cannot be redefined.
 ## Installation
 `gem install final`
 
+## Adding the trusted cert
+`gem cert --add <(curl -Ls https://raw.githubusercontent.com/djberg96/final/main/certs/djberg96_pub.pem)`
+
 ## Synopsis
 ```ruby
 require 'final'
