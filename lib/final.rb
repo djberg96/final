@@ -18,6 +18,7 @@ module Final
       # Prevent subclassing, except implicity subclassing from Object.
       def inherited(_sub)
         raise Error, "cannot subclass #{self}" unless self == Object
+        super
       end
 
       # Prevent methods from being redefined.
@@ -31,6 +32,7 @@ module Final
         else
           final_methods << sym
         end
+        super
       end
     end
   end
