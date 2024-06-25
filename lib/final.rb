@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Make your class final. Once final'ized, it cannot be subclassed and
 # its methods cannot be redefined.
 #
@@ -6,7 +8,7 @@ module Final
   class Error < RuntimeError; end
 
   # The version of the final library.
-  FINAL_VERSION = '0.3.1'.freeze
+  FINAL_VERSION = '0.3.1'
 
   def self.included(mod)
     mod.instance_eval do
